@@ -178,7 +178,7 @@ class PDFGraphics {
      - returns: Resized version of `image`
      */
     static func resize(image: UIImage, frame: CGRect, quality: CGFloat) -> UIImage {
-        let factor: CGFloat = min(3 * quality, 1)
+        let factor: CGFloat = 10//min(3 * quality, 1)
         let resizeFactor = factor.isZero ? 0.2 : factor
 
         let size = CGSize(width: frame.width * resizeFactor,
